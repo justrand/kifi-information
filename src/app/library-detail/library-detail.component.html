@@ -1,0 +1,22 @@
+<div class="library__detail"  *ngIf="library">
+  <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+          <nav>
+            <a class="navigation-link" href="/libraries">Libraries</a>
+          </nav>
+      </div>
+      <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell">
+              <h2>{{library.name}}</h2>
+            <h3>Address</h3>
+            <p>
+              {{library.address.street}}<br>
+              {{library.address.zipcode}} {{library.address.city}}
+            </p>
+          </div>
+          <div class="mdc-layout-grid__cell">¨
+            <img src="{{library.coverPhoto.small.url}}" alt="{{library.name}}">
+          </div>
+      </div>
+  </div>
+</div>

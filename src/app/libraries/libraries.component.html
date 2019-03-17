@@ -1,0 +1,25 @@
+
+<table class="libraries__table" *ngIf="libraries != undefined">
+  <thead>
+    <tr>
+      <th class="libraries__table__header-cell">Type</th>
+      <th class="libraries__table__header-cell">Name</th>
+      <th class="libraries__table__header-cell">City</th>
+      <th class="libraries__table__header-cell">Address</th>
+      <th class="libraries__table__header-cell">Created</th>
+      <th class="libraries__table__header-cell">Modified</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let library of libraries.items">
+      <td class="libraries__table__body-cell">
+          <i class="material-icons">airport_shuttle</i>
+      </td>
+      <td class="libraries__table__body-cell"><a routerLink="/detail/{{library.id}}">{{library.name}}</a></td>
+      <td class="libraries__table__body-cell">{{library.address.city}}</td>
+      <td class="libraries__table__body-cell">{{library.address.street}} {{library.address.zipcode}}</td>
+      <td class="libraries__table__body-cell">{{library.created}}</td>
+      <td class="libraries__table__body-cell">{{library.modified}}</td>
+    </tr>
+  </tbody>
+</table>

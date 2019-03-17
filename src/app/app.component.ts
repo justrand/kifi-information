@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LibraryService } from './library.service';
+import {LibraryList} from './library-list';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kifi-style-app';
+
+  public constructor() {}
+
 }
